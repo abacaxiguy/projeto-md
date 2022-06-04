@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="images">
+    <file>authentication.png</file>
+    <file>key-security.png</file>
+  </qresource>
+</RCC>
