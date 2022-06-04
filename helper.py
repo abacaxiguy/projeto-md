@@ -1,6 +1,3 @@
-from math import sqrt
-
-
 def verifica_primo(num):
   """
     Verifica se o numero digitado é primo, retornando True se for, False se não for.
@@ -23,16 +20,10 @@ def verifica_coprimo(a, b):
     return verifica_coprimo(b, a % b)
 
 
-def retorna_coprimos(n, i):
+def retorna_coprimos(n):
     """
-    Essa função calcula os coprimos de um número e o retorna ao usuário.
+    Essa função calcula os coprimos de um número e o retorna ao usuário em uma lista.
     """
 
-    if i == n:
-        return
-
-    if verifica_coprimo(n, i) == 1:
-        print(f'{i}, ')
-    
-    return retorna_coprimos(n, i + 1)
+    return [i for i in range(1, n+1) if verifica_coprimo(n, i)]
 
