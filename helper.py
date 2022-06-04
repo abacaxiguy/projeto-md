@@ -4,8 +4,9 @@ def verifica_primo(num):
   """
 
   # Retorna True se em qualquer uma das iterações, nesse caso, da variável "i", o "num" atende a condição, e False se não. No final inverte o booleano.
+  # Se for 1, retorna False de imediato.
 
-  return not any((num % i == 0 and i != num and i != 1) or num == 1 for i in range(1, num+1))
+  return False if num == 1 else not any((num % i == 0) for i in range(2, num))
 
 
 def verifica_coprimo(a, b):
