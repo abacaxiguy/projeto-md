@@ -27,3 +27,20 @@ def retorna_coprimos(n):
 
     return [i for i in range(1, n+1) if verifica_coprimo(n, i)]
 
+
+def calcula_d(e, totiente):
+  """
+  Essa função calculará o "d" da criptografia. Receberá o "e" e o totiente.
+  Totiente = (p - 1)(q - 1)
+  d = inverso de "e" mod totiente
+  """
+
+  d = 0
+
+  while True:
+    if ((e * d) % totiente) == 1:
+      break
+
+    d+=1
+
+  return d
