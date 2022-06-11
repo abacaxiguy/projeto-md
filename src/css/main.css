@@ -1,0 +1,57 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  padding-top: 70px;
+}
+
+.logo-inicio{
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.p-inicio{
+  color: rgb(172, 172, 172);
+  text-align: center;
+  padding-top: 10px;
+  margin: auto;
+  margin-bottom: 50px;
+  max-width: 500px;
+
+}
+
+.main-content a{
+  text-decoration: none;
+}
+
+.botao-inicio{
+  color: white;
+  background-color: lightcoral;
+  border: 4px solid lightcoral;
+  border-radius: 10px;
+  padding: 10px 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+  transition: 0.3s all;
+}
+
+.botao-inicio:focus,
+.main-content a:focus{
+  outline: none;
+}
+
+.botao-inicio:hover{
+  background-color: white;
+  color: lightcoral;
+}
+
+/**/
