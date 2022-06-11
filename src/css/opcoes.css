@@ -1,3 +1,105 @@
-a{
-  text-decoration: none;
+a {
+    text-decoration: none;
+}
+
+.container-app {
+    color: var(--preto);
+}
+
+.voltar-container {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s all;
+}
+
+.voltar-container:hover {
+    filter: brightness(1.2);
+}
+
+.voltar-container img {
+    height: 20px;
+}
+
+.volta {
+    padding-left: 6px;
+    color: var(--verde);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 40px;
+    align-self: center;
+}
+
+.title h2:after {
+    position: absolute;
+    left: 43%;
+    content: "";
+    height: 50px;
+    width: 13%;
+    border-bottom: solid 6px var(--verde);
+}
+
+.title h2 {
+    font-size: 36px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 50px;
+}
+
+.btn {
+    height: 200px;
+    width: 400px;
+    min-width: 110px;
+    padding: 20px 40px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid var(--verde);
+    border-radius: 20px;
+    margin: 0 20px;
+    transition: 0.2s all, 0.3s box-shadow;
+}
+
+.btn-option {
+    color: var(--verde);
+    text-align: center;
+    font-size: 20px;
+    transition: 0.2s all;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--verde);
+    box-shadow: 7px 7px 20px 0px var(--verde);
+}
+
+.btn:hover .btn-option {
+    color: white;
+}
+
+.btn:hover .btn-icon path {
+    fill: white;
+}
+
+.btn-icon {
+    width: 40px;
+    transition: 0.2s all;
+}
+
+.btn-icon path {
+    fill: var(--preto);
 }
