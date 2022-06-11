@@ -1,0 +1,94 @@
+:root {
+    --verde: #3daf9e;
+    --rosa: #cb3572;
+    --preto: #202024;
+}
+
+.dark-theme-btn {
+    width: 70px;
+    height: 70px;
+    background-color: var(--rosa);
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 var(--rosa);
+    transition: all 0.1s ease-in-out;
+
+    font-size: 50px;
+    color: white;
+    line-height: 70px;
+
+    position: fixed;
+    right: 20px;
+    top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+    cursor: pointer;
+}
+
+.dark-icon path, 
+.light-icon path{
+    fill: white
+}
+
+.invisible {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    padding-top: 70px;
+}
+
+.logo-inicio {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.p-inicio {
+    color: rgb(172, 172, 172);
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+.main-content a {
+    text-decoration: none;
+}
+
+.botao-inicio {
+    color: white;
+    background-color: var(--rosa);
+    border: 4px solid var(--rosa);
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    transition: 0.3s all;
+}
+
+.botao-inicio:focus,
+.main-content a:focus {
+    outline: none;
+}
+
+.botao-inicio:hover {
+    filter: brightness(1.2);
+}
