@@ -45,3 +45,25 @@ def calcula_d(e, totiente):
     d+=1
 
   return d
+
+
+def gera_chave(p, q):
+
+  # Calcula "n", e seus coprimos
+  n = p * q
+
+  coprimos_de_n = retorna_coprimos(n)
+
+  print(f'Os coprimos de n são: {[{x} for x in coprimos_de_n]}')
+  e = int(input('\nDigite o e: '))
+
+  # # Calcula "d"
+  # totiente = (p - 1) * (q - 1)
+
+  # d = calcula_d(e, totiente)
+
+  print(f'\nA chave pública é: (e={e}, n={n})')
+
+
+gera_chave(
+    51058519510333014836762459628027973450795103113193673361037892391005571903381, 31567027958063216250381038962067482561657729251678645535009694808528411493373)
