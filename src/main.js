@@ -14,7 +14,7 @@ const createWindow = () => {
         height: 600,
         icon: path.join(__dirname, "img", "key-security.png"),
         resizable: false,
-        fullscreenable: false
+        fullscreenable: false,
     });
 
     // and load the index.html of the app.

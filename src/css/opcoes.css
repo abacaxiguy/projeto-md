@@ -68,10 +68,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 3px solid var(--verde);
+    border: 4px solid var(--verde);
     border-radius: 20px;
     margin: 0 20px;
-    transition: 0.2s all, 0.3s box-shadow;
+    transition: 0.2s all;
 }
 
 .btn-option {
@@ -103,3 +103,26 @@ a {
 .btn-icon path {
     fill: var(--preto);
 }
+
+/* ------------- dark-theme ------------- */
+
+.dark .container-app{
+    color: white;
+}
+
+.dark .btn{
+    background: rgba(56, 54, 54, 0.4);
+}
+
+.dark .btn-option {
+    color: white;
+}
+
+.dark .btn-icon path {
+    fill: white;
+}
+
+.dark .btn:hover{
+    background: var(--verde);
+}
+
