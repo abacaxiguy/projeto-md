@@ -1,4 +1,4 @@
-function verificaPrimo(num) {
+export function verificaPrimo(num) {
     /*
     Verifica se o numero digitado é primo, retornando True se for, False se não for.
 
@@ -16,7 +16,7 @@ function verificaPrimo(num) {
     }
 }
 
-function verificaCoprimo(a, b) {
+export function verificaCoprimo(a, b) {
     if (a % b == 0) {
         return b == 1 ? true : false;
     }
@@ -24,7 +24,7 @@ function verificaCoprimo(a, b) {
     return verificaCoprimo(b, a % b);
 }
 
-function retornaCoprimos(n) {
+export function retornaCoprimos(n) {
     coprimo = Math.round(Math.random() * (n / 2 - 1) + 1);
 
     if (coprimo > n) retornaCoprimos(n);
@@ -34,7 +34,7 @@ function retornaCoprimos(n) {
     return coprimo;
 }
 
-function calcula_d(e, totiente) {
+export function calcula_d(e, totiente) {
     d = 0;
 
     while (true) {
@@ -45,6 +45,66 @@ function calcula_d(e, totiente) {
 
     return d;
 }
+
+function fermat(e, n, msg) {
+    if (e > 10) {
+        p = e % (n - 1);
+        final = Math.pow(msg, p);
+        return final % n;
+    } else {
+        final = Math.pow(msg, e);
+        return final % n;
+    }
+}
+
+// int main() {
+//     char str[600];
+//     int e, n;
+
+//     printf("Digite o texto que deseja encriptar:\n");
+//     fgets(str, 600, stdin);
+
+//     printf("Digite os valores da chave pública(e,n):\n");
+//     scanf("%d %d", &e, &n);    
+
+//     int num[strlen(str)];
+
+//     //Transformar o texto em letras maiúsculas, pois estou utilizando como base a tabela ascii 
+//     for(int i = 0; i < strlen(str)-1; i++){
+//         str[i] = toupper(str[i]);
+//     }
+//     int exp = 0;
+//     //Criar um array com valores numéricos, utilizando a tabela ascii
+//     for(int i = 0; i < strlen(str)-1; i++){
+//         if(str[i] != ' '){
+//             num[i] = str[i] - 'A' + 2; //pois "A" na tabela ascii tem valor 65 e quero que fique no valor 2 
+//         } else {
+//             num[i] = 28; //o espaço entre as palavras terá valor 28
+//         }
+//         if (num[i] <= 9){
+//             exp += 1; //quantidade de digitos do numero
+//         } else {
+//             exp += 2;
+//         }
+//     }
+//     exp -= 1;
+//     //Transformar os valores numéricos em um único número
+//     long double numero = 0;
+//     for(int i = 0; i < strlen(str)-1; i++){
+//         if(num[i]/10 == 0){
+//             numero += (long double)(num[i]*pow(10, exp));
+//             exp--;
+//         } else {
+//             numero += (long double)((num[i]/10)*pow(10, exp));
+//             numero += (long double)((num[i]%10)*pow(10, exp-1));
+//             exp -= 2;
+//         }
+//     }
+//     //usar fermat para diminuir a potencia, caso "e" seja um numero maior que 10, e irei criptografar usando a formula (texto^e) mod(n)
+//     fermat(e, n, numero);
+
+//     return 0;
+// }
 
 // def gera_chave(p, q):
 
