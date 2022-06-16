@@ -2,31 +2,6 @@ a {
     text-decoration: none;
 }
 
-.container-app {
-    color: var(--preto);
-}
-
-.voltar-container {
-    margin: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: 0.3s all;
-}
-
-.voltar-container:hover {
-    filter: brightness(1.2);
-}
-
-.voltar-container img {
-    height: 20px;
-}
-
-.volta {
-    padding-left: 6px;
-    color: var(--verde);
-}
-
 .main {
     display: flex;
     flex-direction: column;

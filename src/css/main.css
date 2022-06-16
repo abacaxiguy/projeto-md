@@ -43,6 +43,60 @@
     font-family: "Poppins", sans-serif;
 }
 
+.container-app {
+    color: var(--preto);
+}
+
+.voltar-container {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s all;
+}
+
+.voltar-container:hover {
+    filter: brightness(1.2);
+}
+
+.voltar-container img {
+    height: 20px;
+}
+
+.volta {
+    padding-left: 6px;
+    color: var(--verde);
+}
+
+.btn-lg {
+    color: white;
+    background-color: var(--verde);
+    border: 4px solid var(--verde);
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    transition: 0.3s all;
+}
+
+.btn-lg:focus {
+    outline: none;
+}
+
+.btn-lg:hover {
+    filter: brightness(1.2);
+}
+
+/* ----------- Global Styles ^^ ---------- */
+
+.main-content a:focus {
+    outline: none;
+}
+
 .container {
     padding-top: 70px;
 }
@@ -67,29 +121,7 @@
     text-decoration: none;
 }
 
-.botao-inicio {
-    color: white;
-    background-color: var(--verde);
-    border: 4px solid var(--verde);
-    border-radius: 10px;
-    padding: 10px 40px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 20px;
-    display: block;
-    margin: auto;
-    margin-bottom: 50px;
-    transition: 0.3s all;
-}
 
-.botao-inicio:focus,
-.main-content a:focus {
-    outline: none;
-}
-
-.botao-inicio:hover {
-    filter: brightness(1.2);
-}
 
 /* ------------- dark-theme ------------- */
 
