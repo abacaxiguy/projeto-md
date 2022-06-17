@@ -15,6 +15,11 @@ const createWindow = () => {
         icon: path.join(__dirname, "img", "key-security.png"),
         resizable: false,
         fullscreenable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true,
+        },
     });
 
     // and load the index.html of the app.

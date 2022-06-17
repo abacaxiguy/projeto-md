@@ -1,4 +1,4 @@
-export function verificaPrimo(num) {
+function verificaPrimo(num) {
     /*
     Verifica se o numero digitado é primo, retornando True se for, False se não for.
 
@@ -16,7 +16,7 @@ export function verificaPrimo(num) {
     }
 }
 
-export function verificaCoprimo(a, b) {
+function verificaCoprimo(a, b) {
     if (a % b == 0) {
         return b == 1 ? true : false;
     }
@@ -24,7 +24,7 @@ export function verificaCoprimo(a, b) {
     return verificaCoprimo(b, a % b);
 }
 
-export function retornaCoprimos(n) {
+function retornaCoprimos(n) {
     coprimo = Math.round(Math.random() * (n / 2 - 1) + 1);
 
     if (coprimo > n) retornaCoprimos(n);
@@ -34,7 +34,7 @@ export function retornaCoprimos(n) {
     return coprimo;
 }
 
-export function calcula_d(e, totiente) {
+function calcula_d(e, totiente) {
     d = 0;
 
     while (true) {
@@ -46,7 +46,7 @@ export function calcula_d(e, totiente) {
     return d;
 }
 
-export function fermat(e, n, msg) {
+function fermat(e, n, msg) {
     if (e > 10) {
         p = e % (n - 1);
         bloquinho = Math.pow(msg, p);
@@ -59,9 +59,19 @@ export function fermat(e, n, msg) {
     }
 }
 
-export function gera_chave(msg, e, n) {
+function exponenciacaoModular(x, y, m) {
+    if (y == 0) return 1;
 
-    // Tabela ASCII 🤡
+    p = exponenciacaoModular(x, parseInt(y / 2), m) % m;
+
+    p = (p * p) % m;
+
+    return y % 2 == 0 ? p : (x * p) % m;
+}
+
+function gera_chave(msg, e, n) {
+
+    // Tabela ASCII
     ascii = { A: 2, B: 3, C: 4, D: 5, E: 6, F: 7, G: 8, H: 9, I: 10, J: 11, K: 12, L: 13, M: 14, N: 15, O: 16, P: 17, Q: 18, R: 19, S: 20, T: 21, U: 22, V: 23, W: 24, X: 25, Y: 26, Z: 27, " ": 28 };
 
     // Array pra msg encriptada
@@ -78,7 +88,7 @@ export function gera_chave(msg, e, n) {
     msg_encriptada = []
     for (letra of letras) {
         letra_num = ascii[letra];
-        msg_encriptada.push((Math.pow(letra_num, e) % n).toString())
+        msg_encriptada.push(exponenciacaoModular(letra_num, e, n).toString());
     } 
 
     return msg_encriptada;
@@ -124,8 +134,6 @@ export function gera_chave(msg, e, n) {
 
     // return msg_quebrada;
 }
-
-console.log(gera_chave("hello", 71, 1073));
 
 // int main() {
 //     char str[600];

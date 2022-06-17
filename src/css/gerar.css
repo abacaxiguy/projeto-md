@@ -1,0 +1,93 @@
+.split-sides{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-app{
+  flex-basis: 55%;
+}
+
+.info-container{
+  flex-basis: 45%;
+}
+
+.voltar-container{
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+
+.container-app{
+  padding: 30px;
+}
+
+.form-group{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.input-container{
+  flex: 1;
+}
+
+.error-icon{
+  margin-top: 9px;
+  margin-left: 10px;
+  width: 25px;
+}
+
+input{
+  border: 2px solid #dbdcdd;
+  background-color: #E1E2E7;
+  color: var(--preto);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+::-webkit-input-placeholder{
+  color: var(--preto);
+  font-weight: bold;
+}
+
+.input-container input{
+  width: 100%;
+  font-weight: bold;
+}
+
+.input-container input.is-invalid{
+  border-color: var(--rosa)
+}
+
+.invalid-feedback{
+  color: var(--rosa);
+  padding: 5px 0 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row input{
+  margin-right: 10px;
+}
+
+.info-container{
+  min-height: 551px;
+  max-height: 551px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  background-color: #14130E;
+  color: white;
+}
+
+.info-container h2{
+  font-size: 30px;
+  margin-bottom: 10%;
+}
