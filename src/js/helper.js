@@ -94,24 +94,27 @@ function encriptar(msg, e, n) {
 
 }
 
-function atualiza_s_e_t(a, b, s, t) {
-    return [t - parseInt(b / a) * s, s];
-}
+function euclides_estendido(a, b, s, t) {
+    if (a == 0) {
+        s = 0;
+        t = 1;
+        let resultados = [b, s, t];
+        return resultados;
+    }
 
-function euclides_extendido(a, b) {
-    if (a == 0) return [b, 0, 1];
-    
-    [mdc, s1, t1] = euclides_extendido(b % a, a);
-        
-    [s, t] = atualiza_s_e_t(a, b, s1, t1);
+    [mdc, s, t] = euclides_estendido(b % a, a, s, t);
 
-    return [mdc, s, t];
+    let temp = s;
+    s = t - parseInt(b / a) * s;
+    t = temp;
 
+    let resultados = [mdc, s, t];
+
+    return resultados;
 }
 
 function inverso_mod(e, z) {
-    return euclides_extendido(e, z)[1]
-
+    return euclides_estendido(e, z)[1];
 }
 
 function desencriptar(msg, p, q, e) {
