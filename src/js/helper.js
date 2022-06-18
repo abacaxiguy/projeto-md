@@ -74,9 +74,6 @@ function encriptar(msg, e, n) {
     // Tabela ASCII
     ascii = { A: 2, B: 3, C: 4, D: 5, E: 6, F: 7, G: 8, H: 9, I: 10, J: 11, K: 12, L: 13, M: 14, N: 15, O: 16, P: 17, Q: 18, R: 19, S: 20, T: 21, U: 22, V: 23, W: 24, X: 25, Y: 26, Z: 27, " ": 28 };
 
-    // Array pra msg encriptada
-    msg_encriptada = [];
-
     // Transforma a msg dada em maiuscula
     msg = msg.toUpperCase();
 
@@ -84,13 +81,14 @@ function encriptar(msg, e, n) {
     letras = msg.split("");
 
     // Pega o codigo da letra, e coloca no array "msg_encriptada"
-    msg_encriptada = []
+    msg_encriptada = "";
+
     for (letra of letras) {
         letra_num = ascii[letra];
-        msg_encriptada.push(exponenciacaoModular(letra_num, e, n).toString());
+        msg_encriptada += exponenciacaoModular(letra_num, e, n).toString() + " ";
     }
 
-    return msg_encriptada;
+    return msg_encriptada.trim();
 
 }
 

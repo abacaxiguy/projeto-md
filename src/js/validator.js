@@ -53,7 +53,13 @@ function gerarE() {
 
     if (inputP < 1 || inputQ < 1 || !inputP || !inputQ) {
         throw_error("e", '"P" e "Q" devem ter algum número, para "E" ser gerado.');
+        return;
     };
+
+    if (!verificaPrimo(inputQ) || !verificaPrimo(inputP)) {
+        throw_error("e", '"P" e "Q" devem ser primos, para "E" ser gerado.');
+        return;
+    }
 
     inputE.value = retornaCoprimos((inputP - 1) * (inputQ - 1))
     limpaInput('e');
@@ -63,13 +69,30 @@ function gerarChave() {
     inputP = parseInt(document.querySelector(".input-p").value);
     inputQ = parseInt(document.querySelector(".input-q").value);
     inputE = parseInt(document.querySelector(".input-e").value);
+    feedback = document.querySelector('.gerar-feedback');
+    error = 0;
+    
+    if (!inputE) {
+        throw_error("e", '"E" deve ser um coprimo de (p - 1)(q - 1).');
+        error = 1;
+    }
+    if (!inputP){
+        throw_error("p", "O número digitado deve ser um primo.");
+        error = 1;
+    }
+    if (!inputQ){
+        throw_error("q", "O número digitado deve ser um primo.");
+        error = 1;
+    }
+
+    if (error == 1) return;
 
     if (!verificaPrimo(inputQ) || !verificaPrimo(inputP)) {
         throw_error("p", "O número digitado deve ser um primo.");
         throw_error("q", "O número digitado deve ser um primo.");
         return;
     }
-
+    
     n = inputP * inputQ;
     z = (inputP - 1) * (inputQ - 1)
 
@@ -78,7 +101,8 @@ function gerarChave() {
         return;
     }
 
-    alert(`A chave pública é (e=${inputE}, n=${n})`);
+    saveFile("public_key", `e = ${inputE}, n = ${n}`);  
+    feedback.innerHTML = "Sua chave pública foi criada com sucesso!"
 }
 
 function limpaInput(id) {
@@ -89,15 +113,19 @@ function limpaInput(id) {
     p.innerHTML = '';
 
     img = document.querySelector(`.error-icon-${id}`);
-    img.classList.add("invisible");    
+    img.classList.add("invisible");  
+    
+
 }
 
 function criptografar() {
     inputN = parseInt(document.querySelector(".input-n").value);
     inputE = parseInt(document.querySelector(".input-e").value);
     inputMsg = document.querySelector('.input-msg').value.trim();
+    feedback = document.querySelector(".criptografar-feedback");
 
-    alert(`Sua mensagem foi criptografada: ${encriptar(inputMsg, inputE, inputN)}`);
+    saveFile("encrypted_message", `${encriptar(inputMsg, inputE, inputN)}`);
+    feedback.innerHTML = "Sua mensagem foi criptografada com sucesso!";
 }
 
 function descriptografar() {
@@ -105,6 +133,18 @@ function descriptografar() {
     inputQ = parseInt(document.querySelector(".input-q").value);
     inputE = parseInt(document.querySelector(".input-e").value);
     inputMsg = document.querySelector(".input-msg").value.trim();
+    feedback = document.querySelector(".descriptografar-feedback");
 
-    alert(`Sua mensagem foi descriptografada: ${desencriptar(inputMsg, inputP, inputQ, inputE)}`);
+    // msg_desencriptada = await axios.post({inputMsg, inputP, inputQ}, baseUrl + "desencriptar")
+
+    saveFile("decrypted_message", `${desencriptar(inputMsg, inputP, inputQ, inputE)}`);
+    feedback.innerHTML = "Sua mensagem foi descriptografada com sucesso!";
+}
+
+function saveFile(name, content) {
+    const element = document.createElement("a");
+    const file = new Blob([content], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download = name + ".txt";
+    element.click();
 }
