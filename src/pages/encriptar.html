@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Criptografia RSA</title>
         <link rel="stylesheet" href="../css/main.css" />
-        <link rel="stylesheet" href="../css/gerar.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
@@ -27,46 +26,40 @@
                 <div class="form-container">
                     <div class="form-group">
                         <div class="input-container">
-                            <input onblur="validaInputP()" onfocus="limpaInput('p')" class="input-p" type="number" placeholder="P: ">
-                            <p class="invalid-feedback invalid-feedback-p"></p>
+                            <input class="input-n" type="number" placeholder="N: ">
+                            <p class="invalid-feedback invalid-feedback-n"></p>
                         </div>
-                        <img class="invisible error-icon error-icon-p" src="../img/error-alert.svg" alt="!">
+                        <img class="invisible error-icon error-icon-n" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div class="form-group">
                         <div class="input-container">
-                            <input onblur="validaInputQ()" onfocus="limpaInput('q')" class="input-q" type="number" placeholder="Q: ">
-                            <p class="invalid-feedback invalid-feedback-q"></p>
-                        </div>
-                        <img class="invisible error-icon error-icon-q" src="../img/error-alert.svg" alt="!">
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-container">
-                            <div class="form-row">
-                                <input onblur="validaInputE()" onfocus="limpaInput('e')" class="input-e" type="number" placeholder="E: ">
-                                <div onclick="gerarE()" class="btn btn-sm">Gerar</div>
-                            </div>
+                            <input class="input-e" type="number" placeholder="E: ">
                             <p class="invalid-feedback invalid-feedback-e"></p>
                         </div>
                         <img class="invisible error-icon error-icon-e" src="../img/error-alert.svg" alt="!">
                     </div>
 
-                    <div onclick="gerarChave()" class="btn btn-lg btn-gerar">Gerar chave</div>
-                    <div class="success-feedback gerar-feedback"></div>
-                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <textarea class="input-msg" placeholder="Mensagem: " rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <div onclick="criptografar()" class="btn btn-lg btn-criptografar">Criptografar</div>
+                    <div class="success-feedback criptografar-feedback"></div>
                 </div>
             </div>
 
             <div class="info-container">
-                <h2 class="title">Gerador de chave pública</h2>
-                <p class="info">A chave pública é alguma merda que eu não lembro agora mais sei lá vai que alguém não sabe né.</p>
+                <h2 class="title">Criptografar</h2>
+                <p class="info">P/ Criptografar É alguma merda que eu não lembro agora maisseila vai que alguem n sabe ne</p>
             </div>
         </div>
-        
+
         <script src="../main.js"></script>
-        <script src="../js/helper.js"></script>
         <script src="../js/validator.js"></script>
+        <script src="../js/helper.js"></script>
         <script src="../js/darkTheme.js"></script>
     </body>
 </html>

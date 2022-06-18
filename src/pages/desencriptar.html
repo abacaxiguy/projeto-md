@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Criptografia RSA</title>
         <link rel="stylesheet" href="../css/main.css" />
-        <link rel="stylesheet" href="../css/gerar.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
@@ -17,7 +16,7 @@
             <svg class="light-icon invisible" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg> <svg class="dark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
         </div>
 
-        <div class="split-sides">
+                <div class="split-sides">
             <div class="container-app">
                 <div class="voltar-container">
                     <img src="../img/arrow-left.svg" alt="⬅" />
@@ -27,7 +26,7 @@
                 <div class="form-container">
                     <div class="form-group">
                         <div class="input-container">
-                            <input onblur="validaInputP()" onfocus="limpaInput('p')" class="input-p" type="number" placeholder="P: ">
+                            <input class="input-p" type="number" placeholder="P: ">
                             <p class="invalid-feedback invalid-feedback-p"></p>
                         </div>
                         <img class="invisible error-icon error-icon-p" src="../img/error-alert.svg" alt="!">
@@ -35,38 +34,36 @@
 
                     <div class="form-group">
                         <div class="input-container">
-                            <input onblur="validaInputQ()" onfocus="limpaInput('q')" class="input-q" type="number" placeholder="Q: ">
-                            <p class="invalid-feedback invalid-feedback-q"></p>
+                            <input class="input-q" type="number" placeholder="Q: ">
                         </div>
-                        <img class="invisible error-icon error-icon-q" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div class="form-group">
                         <div class="input-container">
-                            <div class="form-row">
-                                <input onblur="validaInputE()" onfocus="limpaInput('e')" class="input-e" type="number" placeholder="E: ">
-                                <div onclick="gerarE()" class="btn btn-sm">Gerar</div>
-                            </div>
-                            <p class="invalid-feedback invalid-feedback-e"></p>
+                            <input class="input-e" type="number" placeholder="E: ">
                         </div>
-                        <img class="invisible error-icon error-icon-e" src="../img/error-alert.svg" alt="!">
                     </div>
 
-                    <div onclick="gerarChave()" class="btn btn-lg btn-gerar">Gerar chave</div>
-                    <div class="success-feedback gerar-feedback"></div>
-                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <textarea class="input-msg" placeholder="Mensagem: " rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <div onclick="descriptografar()" class="btn btn-lg btn-descriptografar">Descriptografar</div>
+                    <div class="success-feedback descriptografar-feedback"></div>
                 </div>
             </div>
 
             <div class="info-container">
-                <h2 class="title">Gerador de chave pública</h2>
-                <p class="info">A chave pública é alguma merda que eu não lembro agora mais sei lá vai que alguém não sabe né.</p>
+                <h2 class="title">Descriptografar</h2>
+                <p class="info">P/ Descriptografar É alguma merda que eu não lembro agora maisseila vai que alguem n sabe ne</p>
             </div>
         </div>
-        
+
         <script src="../main.js"></script>
-        <script src="../js/helper.js"></script>
         <script src="../js/validator.js"></script>
+        <script src="../js/helper.js"></script>
         <script src="../js/darkTheme.js"></script>
     </body>
 </html>
