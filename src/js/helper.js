@@ -69,11 +69,6 @@ function exponenciacaoModular(x, y, m) {
     return y % 2 == 0 ? p : (x * p) % m;
 }
 
-function gera_chave(p, q, e) {
-
-    
-}
-
 function encriptar(msg, e, n) {
 
     // Tabela ASCII

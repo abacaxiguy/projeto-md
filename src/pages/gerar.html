@@ -45,14 +45,14 @@
                         <div class="input-container">
                             <div class="form-row">
                                 <input onblur="validaInputE()" onfocus="limpaInput('e')" class="input-e" type="number" placeholder="E: ">
-                                <div class="btn btn-sm">Gerar</div>
+                                <div onclick="gerarE()" class="btn btn-sm">Gerar</div>
                             </div>
                             <p class="invalid-feedback invalid-feedback-e"></p>
                         </div>
                         <img class="invisible error-icon error-icon-e" src="../img/error-alert.svg" alt="!">
                     </div>
 
-                    <div class="btn btn-lg">Gerar chave</div>
+                    <div onclick="gerarChave()" class="btn btn-lg btn-gerar">Gerar chave</div>
                 </div>
             </div>
 
