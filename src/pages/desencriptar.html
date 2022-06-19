@@ -26,7 +26,7 @@
                 <div class="form-container">
                     <div class="form-group">
                         <div class="input-container">
-                            <input class="input-p" type="number" placeholder="P: ">
+                            <input onfocus="limpaInput('p')" class="input-p" type="number" placeholder="P: ">
                             <p class="invalid-feedback invalid-feedback-p"></p>
                         </div>
                         <img class="invisible error-icon error-icon-p" src="../img/error-alert.svg" alt="!">
@@ -34,20 +34,26 @@
 
                     <div class="form-group">
                         <div class="input-container">
-                            <input class="input-q" type="number" placeholder="Q: ">
+                            <input onfocus="limpaInput('q')" class="input-q" type="number" placeholder="Q: ">
+                            <p class="invalid-feedback invalid-feedback-q"></p>
                         </div>
+                        <img class="invisible error-icon error-icon-q" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div class="form-group">
                         <div class="input-container">
-                            <input class="input-e" type="number" placeholder="E: ">
+                            <input onfocus="limpaInput('e')" class="input-e" type="number" placeholder="E: ">
+                            <p class="invalid-feedback invalid-feedback-e"></p>
                         </div>
+                        <img class="invisible error-icon error-icon-e" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div class="form-group">
                         <div class="input-container">
-                            <textarea class="input-msg" placeholder="Mensagem: " rows="4"></textarea>
+                            <textarea onfocus="limpaInput('msg')" class="input-msg" placeholder="Mensagem: " rows="3"></textarea>
+                            <p class="invalid-feedback invalid-feedback-msg"></p>
                         </div>
+                        <img class="invisible error-icon error-icon-msg" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div onclick="descriptografar()" class="btn btn-lg btn-descriptografar">Descriptografar</div>
@@ -57,7 +63,7 @@
 
             <div class="info-container">
                 <h2 class="title">Descriptografar</h2>
-                <p class="info">P/ Descriptografar É alguma merda que eu não lembro agora maisseila vai que alguem n sabe ne</p>
+                <p class="info">Para descriptografar a mensagem, será usada a chave privada. A chave privada é a chave que pertence apenas ao proprietário, e deve ser guardada com segurança. É com essa chave que o código será descriptografado, mais uma vez, com a tabela ASCII personalizada. A criação dessa chave foi feita com um algoritmo de Euclides Estendido.</p>
             </div>
         </div>
 

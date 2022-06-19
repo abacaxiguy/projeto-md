@@ -26,7 +26,7 @@
                 <div class="form-container">
                     <div class="form-group">
                         <div class="input-container">
-                            <input class="input-n" type="number" placeholder="N: ">
+                            <input onfocus="limpaInput('n')" class="input-n" type="number" placeholder="N: ">
                             <p class="invalid-feedback invalid-feedback-n"></p>
                         </div>
                         <img class="invisible error-icon error-icon-n" src="../img/error-alert.svg" alt="!">
@@ -34,7 +34,7 @@
 
                     <div class="form-group">
                         <div class="input-container">
-                            <input class="input-e" type="number" placeholder="E: ">
+                            <input onfocus="limpaInput('e')" class="input-e" type="number" placeholder="E: ">
                             <p class="invalid-feedback invalid-feedback-e"></p>
                         </div>
                         <img class="invisible error-icon error-icon-e" src="../img/error-alert.svg" alt="!">
@@ -42,8 +42,10 @@
 
                     <div class="form-group">
                         <div class="input-container">
-                            <textarea class="input-msg" placeholder="Mensagem: " rows="4"></textarea>
+                            <textarea onfocus="limpaInput('msg')" class="input-msg" placeholder="Mensagem: " rows="4"></textarea>
+                            <p class="invalid-feedback invalid-feedback-msg"></p>
                         </div>
+                        <img class="invisible error-icon error-icon-msg" src="../img/error-alert.svg" alt="!">
                     </div>
 
                     <div onclick="criptografar()" class="btn btn-lg btn-criptografar">Criptografar</div>
@@ -53,7 +55,7 @@
 
             <div class="info-container">
                 <h2 class="title">Criptografar</h2>
-                <p class="info">P/ Criptografar É alguma merda que eu não lembro agora maisseila vai que alguem n sabe ne</p>
+                <p class="info">A criptografia será feita com a chave pública com um algoritmo usando uma tabela ASCII personalizada. Pelo motivo das chaves serem feitas com números grandes, a criptografia foi feita com um algoritmo de Exponenciação Modular Rápida.</p>
             </div>
         </div>
 

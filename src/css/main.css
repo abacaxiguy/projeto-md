@@ -1,5 +1,5 @@
 :root {
-    --verde: #3daf9e;
+    --verde: #00b19f;
     --rosa: #cb3572;
     --preto: #202024;
 }
@@ -121,17 +121,39 @@ body{
 .logo-inicio {
     display: block;
     margin: auto;
-    width: 200px;
-    height: 200px;
+    height: 150px;
+    width: 300px;
+    margin-bottom: 40px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .p-inicio {
     color: rgb(172, 172, 172);
-    text-align: center;
+    text-align: justify;
     padding-top: 10px;
     margin: auto;
     margin-bottom: 50px;
     max-width: 500px;
+}
+
+.footer{
+    margin-top: 40px;
+    font-size: 16px;
+    color: var(--verde);
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer a{
+    padding-left: 5px;
+    color: var(--rosa);
+    text-decoration: underline;
+}
+
+.footer a:not(:last-child){
+    padding-right: 5px;
 }
 
 /* ------------- dark-theme ------------- */
@@ -163,6 +185,7 @@ body{
 
 .container-app {
     flex-basis: 55%;
+    padding-bottom: 300%;
 }
 
 .info-container {
@@ -225,19 +248,22 @@ input {
 }
 
 .info-container {
-    min-height: 551px;
-    max-height: 551px;
+    min-height: 3000em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 40px;
+    padding: 120px 40px;
     background-color: #14130E;
     color: white;
 }
 
 .info-container h2 {
-    font-size: 30px;
-    margin-bottom: 10%;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.info-container p {
+    font-size: 15px;
+    text-align: justify;
 }
 
 textarea {
@@ -269,4 +295,8 @@ textarea {
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
+}
+
+.descriptografar-feedback{
+    padding-top: 10px;
 }
