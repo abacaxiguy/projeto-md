@@ -227,6 +227,8 @@ async function criptografar() {
     inputMsg = document.querySelector('.input-msg').value.trim();
     feedback = document.querySelector(".criptografar-feedback");
 
+    error = 0;
+
     if (!inputN) {
         throw_error("n", 'Este campo é obrigatório.');
         error = 1;
@@ -265,6 +267,8 @@ async function descriptografar() {
     inputE = document.querySelector(".input-e").value;
     inputMsg = document.querySelector(".input-msg").value.trim();
     feedback = document.querySelector(".descriptografar-feedback");
+    error = 0;
+
 
     if (!inputP) {
         throw_error("p", "Este campo é obrigatório.");
