@@ -1,7 +1,7 @@
 {
-  "name": "projeto-md-electron",
-  "productName": "projeto-md-electron",
-  "version": "1.0.0",
+  "name": "projeto-md",
+  "productName": "projeto-md",
+  "version": "2.0.0",
   "description": "Projeto de Criptografia RSA",
   "main": "src/main.js",
   "scripts": {
@@ -24,7 +24,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "projeto_md_electron"
+            "name": "projeto_md"
           }
         },
         {
