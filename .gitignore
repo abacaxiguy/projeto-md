@@ -90,3 +90,7 @@ out/
 
 # Python Virtual Enviroment
 /venv
+
+# Distribution
+/projeto-md-electron*
+/dist
