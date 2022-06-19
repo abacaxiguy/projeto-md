@@ -135,6 +135,24 @@ body{
     max-width: 500px;
 }
 
+.footer{
+    margin-top: 40px;
+    font-size: 16px;
+    color: var(--verde);
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer a{
+    padding-left: 5px;
+    color: var(--rosa);
+    text-decoration: underline;
+}
+
+.footer a:not(:last-child){
+    padding-right: 5px;
+}
+
 /* ------------- dark-theme ------------- */
 
 .dark{
