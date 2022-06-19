@@ -1,5 +1,5 @@
 :root {
-    --verde: #3daf9e;
+    --verde: #00b19f;
     --rosa: #cb3572;
     --preto: #202024;
 }
@@ -124,6 +124,9 @@ body{
     height: 150px;
     width: 300px;
     margin-bottom: 40px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .p-inicio {
@@ -182,6 +185,7 @@ body{
 
 .container-app {
     flex-basis: 55%;
+    padding-bottom: 300%;
 }
 
 .info-container {
@@ -244,12 +248,10 @@ input {
 }
 
 .info-container {
-    min-height: 551px;
-    max-height: 551px;
+    min-height: 3000em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 40px;
+    padding: 120px 40px;
     background-color: #14130E;
     color: white;
 }
@@ -293,4 +295,8 @@ textarea {
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
+}
+
+.descriptografar-feedback{
+    padding-top: 10px;
 }
