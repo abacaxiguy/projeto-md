@@ -121,13 +121,14 @@ body{
 .logo-inicio {
     display: block;
     margin: auto;
-    width: 200px;
-    height: 200px;
+    height: 150px;
+    width: 300px;
+    margin-bottom: 40px;
 }
 
 .p-inicio {
     color: rgb(172, 172, 172);
-    text-align: center;
+    text-align: justify;
     padding-top: 10px;
     margin: auto;
     margin-bottom: 50px;
@@ -236,8 +237,13 @@ input {
 }
 
 .info-container h2 {
-    font-size: 30px;
-    margin-bottom: 10%;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.info-container p {
+    font-size: 15px;
+    text-align: justify;
 }
 
 textarea {
