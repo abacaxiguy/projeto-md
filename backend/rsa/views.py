@@ -2,6 +2,19 @@ from django.http import JsonResponse
 from helper import criptografia
 
 
+def index(request, *args, **kwargs):
+    return JsonResponse({
+        "api": "Projeto Matemática Discreta - Criptografia RSA",
+        "routes": [
+          "api/gerar_chave/?p=<int>&q=<int>&e=<int>",
+          "api/criptografar/?n=<int>&e=<int>&msg=<str>",
+          "api/descriptografar/?p=<int>&q=<int>&e=<int>&msg=<str>",
+          "api/validar_primo/?numero=<int>",
+          "api/validar_coprimo/?p=<int>&q=<int>&e=<int>",
+          "api/gerar_e/?p=<int>&q=<int>"
+        ]
+    })
+
 def gerar_chave(request):
   p = request.GET.get('p')
   q = request.GET.get('q')

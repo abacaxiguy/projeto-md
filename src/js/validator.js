@@ -32,7 +32,7 @@ function limpaInput(id) {
 
 async function getData(url, data) {
     try {
-        const response = await axios.get("http://localhost:8000/api/" + url + data);
+        const response = await axios.get("https://projeto-md-api.herokuapp.com/api/" + url + data);
         return response.data;
     } catch (err) {
         return err;
