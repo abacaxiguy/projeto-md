@@ -92,5 +92,5 @@ out/
 /venv
 
 # Distribution
-/projeto-md-electron*
+/projeto-md*
 /dist
