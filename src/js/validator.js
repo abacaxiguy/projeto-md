@@ -1,4 +1,5 @@
 const { default: axios } = require("axios");
+const apiUrl = process.env.API_URL || "http://localhost:8000/api/";
 
 function saveFile(name, content) {
     const element = document.createElement("a");
@@ -32,7 +33,7 @@ function limpaInput(id) {
 
 async function getData(url, data) {
     try {
-        const response = await axios.get("https://projeto-md-api.herokuapp.com/api/" + url + data);
+        const response = await axios.get(apiUrl + url + data);
         return response.data;
     } catch (err) {
         return err;
