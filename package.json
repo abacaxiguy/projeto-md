@@ -1,7 +1,7 @@
 {
   "name": "projeto-md",
-  "productName": "projeto-md",
-  "version": "2.0.1",
+  "productName": "Criptografia RSA",
+  "version": "2.1.0",
   "description": "Projeto de Criptografia RSA",
   "main": "src/main.js",
   "scripts": {
